@@ -1,38 +1,21 @@
-import { useState } from 'react';
-import Screen2 from './Screen2';
+//import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Header from './components/Header';
+import Navbar from './components/Navbar';
+import MainContent from './components/MainContent';
+import Footer from './components/Footer';
 
-const App = () => {
-  const [selectedButton, setSelectedButton] = useState(null);
-
-  const handleButtonClick = (button) => {
-    setSelectedButton(button);
-  };
-
-  const renderContent = () => {
-    switch (selectedButton) {
-      case 'Button 1':
-        return <div><Screen2/></div>;
-      case 'Button 2':
-        return <div>Content for Button 2</div>;
-      case 'Button 3':
-        return <div>Content for Button 3</div>;
-      default:
-        return <div>Select a button to see content</div>;
-    }
-  };
-
+function App() {
   return (
-    <div className='absolute top-0 w-1/2 ml-auto'>
-      <div className='absolute top-0 w-1/2 ml-auto'>
-        <button onClick={() => handleButtonClick('Button 1')}>Button 1</button>
-        <button onClick={() => handleButtonClick('Button 2')}>Button 2</button>
-        <button onClick={() => handleButtonClick('Button 3')}>Button 3</button>
+    <Router>
+      <div>
+        <Header />
+        <Navbar />
+        <MainContent/>
+        <Footer />
       </div>
-      <div className='absolute top-0 w-1/2 ml-auto'>
-        {renderContent()}
-      </div>
-    </div>
+    </Router>
   );
-};
+}
 
 export default App;
