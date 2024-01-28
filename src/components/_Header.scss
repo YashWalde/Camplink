@@ -1,0 +1,66 @@
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 65px;
+    width: calc(100vw - 270px);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #ffffff;
+    padding: 0 15px;
+    box-sizing: border-box;
+    z-index: 9999;
+  }
+  
+  .search-container {
+    background-color: #d3d3d3; /* Choose your desired background color here */
+    border-radius: 10px; /* Adjust the border-radius as needed */
+    padding: 1px;
+    width: 50%;
+    display: flex; /* Add this to make the input and button appear in a row */
+    align-items: center; /* Add this to vertically center the input and button */
+    justify-content: space-between; /* Add this to create space between input and button */
+    margin-right: 50px;
+  }
+  
+  .header form {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Add this to make the form take up the full width */
+  }
+  
+  .search-input {
+    height: 28px;
+    padding: 2px 5px;
+    border: none;
+    background-color: transparent;
+    outline: none; /* Remove input focus outline */
+    flex: 1; /* Add this to make the input take up remaining space */
+  }
+  
+  .header button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+    margin-left: 5px; /* Change margin-right to margin-left */
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .Header_icons {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+  }
+  
+  .user-avatar {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
